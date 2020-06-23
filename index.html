@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kolos_2_opracowanie</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li><a href="#drzewo">Drzewo</a></li>
+<li><a href="#diagramy">Diagramy</a></li>
+<li><a href="#narzędzia-i-metody-stosowane-w-parserze-predykcyjnym-sterowanym-składnią">Narzędzia i metody stosowane w parserze predykcyjnym sterowanym składnią:</a></li>
+<li><a href="#kody-i-narzędzia-stosowane-w-module-front-end-kompilatora">Kody i narzędzia stosowane w module front-end kompilatora</a></li>
+<li><a href="#kody-pośrednie">Kody pośrednie</a></li>
+<li><a href="#kompilator-czołowy-języka-programowania-musi-być-napisany-w-języku-dla-którego-jest-dostępny-interpreter">Kompilator czołowy języka programowania musi być napisany w języku, dla którego jest dostępny interpreter</a></li>
+<li><a href="#algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-odwrotną-notację-polską-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje odwrotną notację polską i stos</a></li>
+<li><a href="#algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-notację-wrostkową-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje notację wrostkową i stos</a></li>
+<li><a href="#algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-notację-przyrostkową-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje notację przyrostkową i stos</a></li>
+<li><a href="#przy-pisaniu-programu-kompilatora-czołowego-języka-programowania-konieczna-jest-znajomość-architektury-sprzętowej-komputera">Przy pisaniu programu kompilatora czołowego języka programowania konieczna jest znajomość architektury sprzętowej komputera</a></li>
+<li><a href="#funkcje-analizatora-leksykalnego">Funkcje analizatora leksykalnego</a></li>
+<li><a href="#funkcje-analizatora-składniowego">Funkcje analizatora składniowego</a></li>
+<li><a href="#funkcje-analizatora-semantycznego">Funkcje analizatora semantycznego</a></li>
+<li><a href="#funkcje-kodu-pośredniego">Funkcje kodu pośredniego</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h2 id="drzewo">Drzewo</h2>
+<ul>
+<li>a+c</li>
+<li>ac+</li>
+</ul>
+<h2 id="diagramy">Diagramy</h2>
+<center><img src="https://i.stack.imgur.com/aeGbA.png"></center>
+<ul>
+<li><code>&lt;expression&gt;::=&lt;term&gt;|&lt;term&gt;+&lt;expression&gt;</code></li>
+</ul>
+<center><img src="https://i.stack.imgur.com/dEb8l.png"></center>
+<ul>
+<li><code>&lt;factor&gt;::=indent|number|(&lt;expression&gt;)</code></li>
+</ul>
+<center><img src="https://i.stack.imgur.com/uGDI6.png"></center>
+<ul>
+<li><code>&lt;sentence&gt;::=&lt;expression&gt;&lt;sentence&gt;</code></li>
+</ul>
+<center><img src="https://i.stack.imgur.com/wE9j4.png"></center>
+<ul>
+<li><code>&lt;A&gt;::=(&lt;A&gt;)|&lt;A&gt;+&lt;A&gt;|x</code></li>
+</ul>
+<blockquote>
+<p>Chyba źle</p>
+</blockquote>
+<h2 id="narzędzia-i-metody-stosowane-w-parserze-predykcyjnym-sterowanym-składnią">Narzędzia i metody stosowane w parserze predykcyjnym sterowanym składnią:</h2>
+<ul>
+<li>gramatyki klasy LL</li>
+<li>reprezentacja gramatyki w postaci drzew składniowych</li>
+<li>analiza składniowa metodą top-dwon z powrotami</li>
+</ul>
+<h2 id="kody-i-narzędzia-stosowane-w-module-front-end-kompilatora">Kody i narzędzia stosowane w module front-end kompilatora</h2>
+<ul>
+<li>analizator składniowy</li>
+<li>kod pośredni</li>
+<li>kod źródłowy</li>
+</ul>
+<h2 id="kody-pośrednie">Kody pośrednie</h2>
+<ul>
+<li>Common Intermediate Language</li>
+<li>Pcode</li>
+</ul>
+<h2 id="kompilator-czołowy-języka-programowania-musi-być-napisany-w-języku-dla-którego-jest-dostępny-interpreter">Kompilator czołowy języka programowania musi być napisany w języku, dla którego jest dostępny interpreter</h2>
+<ul>
+<li>prawda</li>
+</ul>
+<h2 id="algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-odwrotną-notację-polską-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje odwrotną notację polską i stos</h2>
+<ul>
+<li>prawda</li>
+</ul>
+<h2 id="algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-notację-wrostkową-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje notację wrostkową i stos</h2>
+<ul>
+<li>fałsz</li>
+</ul>
+<h2 id="algorytmy-do-obliczania-wartości-wyrażenia-arytmetycznego-stosowany-w-kompilatorach-wykorzystuje-notację-przyrostkową-i-stos">Algorytmy do obliczania wartości wyrażenia arytmetycznego stosowany w kompilatorach wykorzystuje notację przyrostkową i stos</h2>
+<ul>
+<li>fałsz</li>
+</ul>
+<h2 id="przy-pisaniu-programu-kompilatora-czołowego-języka-programowania-konieczna-jest-znajomość-architektury-sprzętowej-komputera">Przy pisaniu programu kompilatora czołowego języka programowania konieczna jest znajomość architektury sprzętowej komputera</h2>
+<ul>
+<li>fałsz</li>
+</ul>
+<h2 id="funkcje-analizatora-leksykalnego">Funkcje analizatora leksykalnego</h2>
+<ul>
+<li>generowanie tokenów</li>
+<li>rozpoznawanie słów kluczowych</li>
+<li>rozpoznawanie symboli z ciągu wejściowego</li>
+</ul>
+<h2 id="funkcje-analizatora-składniowego">Funkcje analizatora składniowego</h2>
+<ul>
+<li>rozpoznawanie słów kluczowych</li>
+<li>rozpoznawanie symboli z ciągu wejściowego</li>
+<li>generowanie tokenów</li>
+</ul>
+<h2 id="funkcje-analizatora-semantycznego">Funkcje analizatora semantycznego</h2>
+<ul>
+<li>sprawdzenie poprawności użycia symboli zgodnie z ich typem</li>
+<li>analiza znaczenia kodu</li>
+<li>wyszukiwanie błędów semantycznych</li>
+</ul>
+<h2 id="funkcje-kodu-pośredniego">Funkcje kodu pośredniego</h2>
+<ul>
+<li>przyspieszenie pisania programu kompilatora</li>
+<li>ułatwienie przenośności kodu</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>
